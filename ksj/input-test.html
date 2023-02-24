@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>input 테스트</title>
+</head>
+<body>
+    <form>
+        <p><input type="button" value="회원가입" name="joinBtn"></p>
+        <p><input type="text" value="" placeholder="ㅇㅇㅇㅇ" name="text_test"></p>
+        <p><input type="password" value="" placeholder="비밀번호" name="password_test"></p>
+        <p>
+            <input type="radio" name="radio_test" id="radio_test1"><label for="radio_test1">test1</label>
+            <input type="radio" name="radio_test" id="radio_test2"><label for="radio_test2">test2</label>
+            <input type="radio" name="radio_test" id="radio_test3"><label for="radio_test3">test3</label>
+        </p>
+        <p>
+            <input type="checkbox" name="checkbox_test" id="cham"><label for="cham">참이슬</label>
+            <input type="checkbox" name="checkbox_test" id="first"><label for="first">처음처럼</label>
+            <input type="checkbox" name="checkbox_test" id="new"><label for="new">새로</label>
+        </p>
+        <p><input type="hidden" name="hidden_test" value="보이지 않는 값"></p>
+        <p><input type="submit" value="제출" name="submitBtn"></p>
+        <p><input type="text" maxlength="10" placeholder="10자리만 입력하세요." name="size_test"></p>
+        <p><input type="button" value="계산" onclick="alert('10000원 입니다.')"></p>
+        <p><button onclick="alert('안녕하세요')">눌러보세요!</button></p>
+        <p><input type="file" accept="image/jpg, image/gif, image/jpeg"></p>
+
+        <p><textarea name="feedback" rows="2" cols="50" readonly>테스트 입니다.</textarea></p>
+    </form>
+</body>
+</html>
