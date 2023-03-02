@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>위치 테스트4</title>
+
+    <style>
+        div {
+            background-color: greenyellow;
+            padding: 2px;
+            width: 300px;
+        }
+        p {
+            background-color: black;
+            color: white;
+        }
+        .other-p{
+            position: relative;
+            width: 300px;
+            left: 50px;
+            top: 50px;
+        }
+        /* #inner-p1 {
+            position: absolute;
+            top: 100px;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <p id="inner-p1">block#1</p>
+    </div>
+    <div>
+        <p id="inner-p2">block#2</p>
+    </div>
+    <p class="other-p">block#3</p>
+</body>
+</html>
