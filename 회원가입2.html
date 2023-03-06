@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 화면</title>
+</head>
+<body>
+    <form action="a-test1 copy.html" method="post">
+        <fieldset style="width: 500px">
+            <legend>필수 입력 사항</legend> 
+            ID:       <input type="ID" placeholder="아이디 10글자 이내"><input type="hidden" name="hidden_test" value="보이지 않는 값">
+            <input type="submit" value="중복 확인" name="submitBtn"><br>
+            비밀번호:    <input type="password" placeholder="영문/숫자 특수문자 포함 8자 작성"><br>
+            비밀번호 확인:       <input type="text"><br>
+            Email:       <input type="text">@
+            <select name="Email">
+                <option value="naver">naver.com</option>
+                <option value="google">google.com</option>
+                <option value="daum" selected>직접입력</option>
+            </select>
+        </fieldset>
+        <p>
+            <input type="submit"  value="회원가입">
+            <input type="reset" value="다시입력" >
+        </P>    
+    </form> 
+</body>
+</html>
