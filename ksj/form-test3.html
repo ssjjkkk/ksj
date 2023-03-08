@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>양식 테스트3</title>
+</head>
+<body>
+    <form>
+        <p>
+            고객명 : <input type="text" name="name">
+        </p>
+        <p>
+            전화번호 : <input type="text" name="email">
+        </p>
+        <p>
+            이메일 : <input type="text" name="email">
+        </p>
+        <fieldset style="width: 300px; height: auto;">
+            <legend>피자 사이즈</legend>
+            <p>
+                <input type="radio" id="small" name="size" value="S">
+                <label for="small">Small</label>
+            </p>
+            <p>
+                <input type="radio" id="medium" name="size" value="M">
+                <label for="medium">Medium</label>
+            </p>
+            <p>
+                <input type="radio" id="large" name="size" value="L">
+                <label for="large">Large</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <p>
+                <input type="checkbox" id="bacon" name="toping" value="b">
+                <label for="bacon">베이컨</label>
+            </p>
+            <p>
+                <input type="checkbox" id="cheeze" name="toping" value="ch">
+                <label for="cheeze">치즈</label>
+            </p>
+            <p>
+                <input type="checkbox" id="union" name="toping" value="u">
+                <label for="union">양파</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mush" name="toping" value="m">
+                <label for="mush">버섯</label>
+            </p>
+        </fieldset>
+        <p>
+            희망배송시간 : <input type="time" name="time">
+        </p>
+        <p>
+            배송시 요청사항 : <textarea rows="5" cols="50"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시선택하기">
+        </p>
+    </form>
+</body>
+</html>
