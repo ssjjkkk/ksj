@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform test</title>
+
+    <style>
+        /* https://codepen.io/vineethtrv/pen/XKKEgM
+        https://developer.mozilla.org
+        */
+        h1 {
+            background-color: deepskyblue;
+            color: white;
+            display: inline-block;
+            padding: 5px;
+            font-size: 3rem;
+            margin: 100px;
+            transform: scaleX(1); /* scale(0.5, 0.5); */
+            /* scale x <x축 , Y는 y축 scale 숫자두개는 x, y */
+        }
+
+        h1:hover {
+            transform: scale(1.5);
+            transform-origin: left bottom;
+            /* transition: all 1s; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform Test</h1>
+</body>
+</html>
