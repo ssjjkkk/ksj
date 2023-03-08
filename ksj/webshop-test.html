@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body, #wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+        }
+        #header {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: baseline;
+            justify-content: left;
+        }
+        #navi li {
+            display: inline; text-transform: uppercase;
+            padding: 0 10px; letter-spacing: 10px;
+        }
+        #navi {
+            list-style: none; text-align: center;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red; 
+            padding: 10px 10px;
+        }
+        #navi li a {
+            text-decoration: none;
+            color: black;
+        }
+        #navi li a:hover {
+            text-decoration: underline;
+        }
+        #category {
+            width: 20%;
+            height: 60%;
+            float: left;
+        }
+        #category table {
+            width: 100%;
+            height: 50%;
+            border-collapse: collapse;
+            background-color: cadetblue;
+        }
+        #category table td {
+            border: 2px grey solid;
+        }
+        #cate tr td a{
+            color: white;
+            text-decoration: none;
+        }
+        #content1 {
+            border: 2px red dashed;            
+            width: 24%;
+            height: 60%;
+            float: left;
+        }
+        #content2 {
+            border-top: 2px red dashed;
+            border-bottom: 2px red dashed;
+            border-right: 2px red dashed;
+            width: 24%;
+            height: 60%;
+            float: left;
+        }
+        #shop {
+            width: 30%;
+            height: 20%;
+            float: right;
+        }
+        #login {
+            width: 30%;
+            height: 40%;
+            float: right;
+        }
+        #footer {
+            width: 100%;
+            height: 20%;
+            clear: both;
+        }
+        a:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img src="img/homepage.jpg" width="80px" height="80px"> &nbsp;
+            <a href="#"><h1>Web Shop</h1></a>
+        </div>
+
+        <div id="nav">
+            <ul id="navi">
+                <li><a href="#" target="_self">home</a></li>
+                <li><a href="#" target="_self">about us</a></li>
+                <li><a href="#" target="_self">news</a></li>
+                <li><a href="#" target="_self">my acount</a></li>
+                <li><a href="#" target="_self">contacts</a></li>
+            </ul>
+        </div>
+
+        <div id="category">
+            <table id="cate">
+                <caption style="text-align: left;"><h4>카테고리</h4></caption>
+                <tr>
+                    <td><a href="NaverLogin.html" target="_self">컴퓨터</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">의류</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">음악</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">영화</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">스포츠/레저</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">가구/인테리어</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="_self">식품</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="content1">
+            <a href="#" target="_self"><img src="img/컴1.jpg" width="200px" height="200px"></a>
+            <p>심플하고 슬림한 본체에 코어i5 3470과 지포스 GT630을 장착 CPU:인텔코어 i5 3470(아이나비브릿지 3세대) 사용<br>가격: 1,200,000원</p>
+            <p><input type="button" value="쇼핑카트에 추가하기" name="addcart"></p>
+        </div>
+
+        <div id="content2">
+            <a href="#" target="_self"><img src="img/컴2.jpg" width="200px" height="200px"></a>
+            <p>FullHD로 선명한 화면, ISP패널로 시야각도 좋다!<br> CPU:인텔코어 i7 3630QM,<br> CPU:인텔 코어 i7 3630QM<br>가격: 1,200,000원</p>
+            <p><input type="button" value="쇼핑카트에 추가하기" name="addcart"></p>
+        </div>
+
+        <div id="shop">
+            <h4>Shopping Cart</h4>
+            <p>현재 쇼핑카트에 물품이 없습니다.</p>
+            <a href="#" target="_self">쇼핑카트 보기</a>
+        </div>
+
+        <div id="login">
+            <form>
+                <h4 style="margin: 1%;">Log in</h4>
+                <span style="margin: 1%;">아이디</span>
+                <p style="margin: 1%;"><input type="text" value="" name="아이디"></p>
+                <span style="margin: 1%;">패스워드</span>
+                <p style="margin: 1%;"><input type="password" value=""name="패스워드"></p>
+                <span>
+                    <a href="#" target="_self"><button>로그인</button></a>
+                </span>
+                <span>
+                    <a href="#" target="_self"><button>초기화</button></a>
+                </span>
+                <p>
+                <span><a href="회원가입2.html" target="_self">회원가입</a></span>
+                <span><a href="#" target="_self">비밀번호분실</a></span>
+                </p>
+            </form>
+        </div>
+        
+        <div id="footer">Copyright (c) 2013 Web shop</div>
+    </div>
+</body>
+</html>
