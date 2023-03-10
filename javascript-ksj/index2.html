@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index2</title>
+    </head>
+    <body>
+
+        <div id="div">..</div>
+        <div class="class">..</div>
+        <p>..</p>
+        <span>..</span>
+        
+
+        <script src="app.js">
+            const 변수 = document.querySelector("#div");  /* assignment (선언한다) */ /* 변수 variable */
+            // divElement 같은 작명방법을 CamelCase라고 한다
+
+            변수.innerHTML = "divvvvvv";
+
+            변수.style.color = "red"
+            변수.style.backgroundColor = "yellow"
+            document.querySelector("#div").style.fontSize = "40px"
+
+            // display, margin, padding, fontFamily, fontStyle, fontWeight 등을 사용해주세요.
+            // const 를 이용해주요.
+            document.querySelector(".class").innerHTML = "classsssss";
+            document.querySelector("p").innerHTML = "pppppppp";
+            document.querySelector("span").innerHTML = "spannnnnn";
+            // w3school
+        </script>
+        
+    </body>
+</html>
