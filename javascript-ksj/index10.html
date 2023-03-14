@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index10</title>
+    </head>
+    <body>
+        <input id="input" placeholder="이름을 적어주세요"/>
+        <button onclick="callback()">click</button>
+        <p id="greeting"></p>
+
+        <script> 
+        // input.value
+            const input = document.querySelector("#input");
+            const id = document.querySelector("#greeting");
+        
+            const callback = function () {
+                id.innerHTML = input.value;
+                input.value = "";qq
+            };
+
+        // 클릭하면 배열안에 값을 추가하기
+        </script>
+    </body>
+</html>

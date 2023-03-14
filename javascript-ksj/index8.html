@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index8</title>
+    </head>
+    <body>
+        <div id="name"></div>
+
+        <script>
+            const userName = prompt("이름");
+            const color = prompt("색상");
+            const divElement = document.querySelector("#name");
+            // divElement.innerHTML = userName;
+            // divElement.style.color = color;
+            
+            const div = function(x, y) {
+                divElement.innerHTML = x;
+                divElement.style.color = y;
+            };
+            div(userName, color);
+        </script>
+    </body>
+</html>
