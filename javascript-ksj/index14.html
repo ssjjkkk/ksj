@@ -15,8 +15,13 @@
             const tag1 = document.querySelector("div");
             const todoList = [];
 
+            const func1 = function (e) {
+                if (e.code === "Enter") {
+                    document.querySelector("button").click();
+                };
+            };
+
             const callback = function () {
-                tag1.innerHTML = "";
                 todoList.push(input.value);
                 display(todoList, tag1);  // 인수로 배열과 위치태그 요소를 사용
                 input.value = "";
@@ -24,12 +29,15 @@
             };
 
             const display = function(array, tag) {
+                tag1.innerHTML = "";
                 for (i=0; i<todoList.length; i++) {
                     const pTag = document.createElement("p");
                     pTag.innerHTML = array[i];
                     tag.appendChild(pTag);
                 };
             };
+
+            input.addEventListener("keydown", func1);
         </script>
     </body>
 </html>

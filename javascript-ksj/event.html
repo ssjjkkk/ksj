@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>event</title>
+    </head>
+    <body>
+        <input id="demo">
+        <button>click</button>
+
+        <script>
+            // 이벤트 등록, 반드시 독립적으로 사용하지 말고 타겟에 붙혀 사용한다.
+            // 콜백 함수의 선언은 반드시 이벤트 등록보다 위에 선언할 것.
+            const btn = document.querySelector("button");
+            const demoInput = document.querySelector("#demo");
+
+            const callback = function () {
+                console.log("버튼 클릭");
+            };
+            
+            const func1 = function (e) {
+                    // console.log("input keydown 이벤트");
+                    // console.log(e.code);
+                    if (e.code === "Enter") {
+                        console.log("엔터키가 눌림");
+                    };
+            };
+
+            btn.addEventListener("click", callback);
+            demoInput.addEventListener("keydown", func1);
+
+        </script>
+    </body>
+</html>
