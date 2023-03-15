@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>todo</title>
+    </head>
+    <body>
+        <input id="input" placeholder="TODO List">
+        <button onclick="callback()">click</button>
+        <div></div>
+        
+        <script>
+            const input = document.querySelector("#input");
+            const callback = function() {
+                const pTag = document.createElement("p"); // <p></p>
+                pTag.innerHTML = input.value;
+                input.value = "";
+                console.log(pTag);
+                div.appendChild(pTag);
+            };
+            const div = document.querySelector("div");
+
+        </script>
+    </body>
+</html>

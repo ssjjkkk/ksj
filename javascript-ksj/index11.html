@@ -8,22 +8,28 @@
     <body>
         <input id="input" placeholder="이름을 적어주세요"/>
         <button onclick="callback()">click</button>
-        <p id="greeting"></p>
+        <div></div>
 
         <script> 
         // input.value
             const input = document.querySelector("#input");
             const id = document.querySelector("#greeting");
-        
+            const div = document.querySelector("div");
+            const array = [];
+
             const callback = function () {
                 array.push(input.value);
-                id.innerHTML = array;
                 input.value = "";
+                display(inputValue);
                 console.log(array);
             };
 
-            const array = [];
-            console.log(array);            
+            const display = function(inputValue) {
+                const pTag = document.createElement("p");
+                pTag.innerHTML = input.value;
+                div.appendChild(pTag);
+                // p태그만들고 p태그에 넣고 디브태그에 넣는다
+            };
 
         // 클릭하면 배열안에 값을 추가하기
         </script>

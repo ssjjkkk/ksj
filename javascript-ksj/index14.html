@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index14</title>
+    </head>
+    <body>
+        <input id="input" placeholder="할 일을 적어주세요"/>
+        <button onclick="callback()" >click</button>
+        <div></div>
+
+        <script> 
+            const input = document.querySelector("#input");
+            const tag1 = document.querySelector("div");
+            const todoList = [];
+
+            const callback = function () {
+                tag1.innerHTML = "";
+                todoList.push(input.value);
+                display(todoList, tag1);  // 인수로 배열과 위치태그 요소를 사용
+                input.value = "";
+                console.log(todoList);
+            };
+
+            const display = function(array, tag) {
+                for (i=0; i<todoList.length; i++) {
+                    const pTag = document.createElement("p");
+                    pTag.innerHTML = array[i];
+                    tag.appendChild(pTag);
+                };
+            };
+        </script>
+    </body>
+</html>

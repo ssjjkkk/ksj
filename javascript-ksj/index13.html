@@ -3,21 +3,31 @@
     <head>
         <meta charset="UTF-8">
         
-        <title>index10</title>
+        <title>index13</title>
     </head>
     <body>
         <input id="input" placeholder="이름을 적어주세요"/>
         <button onclick="callback()">click</button>
-        <p id="greeting"></p>
+        <div></div>
 
         <script> 
         // input.value
             const input = document.querySelector("#input");
             const id = document.querySelector("#greeting");
-        
+            const tag1 = document.querySelector("div");
+            const array = [];
+
             const callback = function () {
-                id.innerHTML = input.value;
+                array.push(input.value);
+                display(input.value, tag1);
                 input.value = "";
+                console.log(array);
+            };
+
+            const display = function(inputValue, tag) {
+                const pTag = document.createElement("p");
+                pTag.innerHTML = inputValue;
+                tag.appendChild(pTag);
             };
 
         // 클릭하면 배열안에 값을 추가하기
