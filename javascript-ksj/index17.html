@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index17</title>
+    </head>
+    <body>
+        <h2>Hello~~</h2>
+
+        <script>
+            // mouseenter, mouseleave
+            const h2 = document.querySelector("h2")
+            const enter = function (e) {
+                h2.innerHTML = "MMMMMMMMMMMMMM";
+                h2.style.color = "blue";
+                h2.style.fontStyle = "italic";
+            };
+
+            const leave = function (e) {
+                h2.innerHTML = "LLLLLLLLLLLLLL";
+                h2.style.color = "red";
+                h2.style.fontStyle = "normal";
+            };
+
+            h2.addEventListener("mouseenter", enter);
+            h2.addEventListener("mouseleave", leave);
+        </script>
+    </body>
+</html>

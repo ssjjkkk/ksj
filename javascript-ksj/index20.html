@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index20</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            const colors = ["red", "blue", "green"];
+            const div = document.querySelector("div");
+            
+            const func1 = function (e) {
+                const width = window.innerWidth; // 브라우저 창의 가로길이
+                div.innerHTML = width;
+                if (width >= 860) {
+                    document.body.style.backgroundColor = colors[0];
+                }else if (width >= 400 && width < 860) {
+                    document.body.style.backgroundColor = colors[1];
+                }else {
+                    document.body.style.backgroundColor = colors[2];
+                };
+            };
+            
+            window.addEventListener("resize", func1);
+        </script>
+    </body>
+</html>

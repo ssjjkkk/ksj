@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index19</title>
+        <style>
+            .myStyle {
+                background-color: coral;
+                padding: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myDiv">
+            <p>나는 DIV 입니다.</p>
+        </div>
+        <button id="btn1">클래스 추가</button>
+        <button id="btn2">클래스 삭제</button>
+        <button id="btn3">Toggle 토글</button>
+
+        <script>
+            const div = document.querySelector("#myDiv");
+            const btn1 = document.querySelector("#btn1");
+            const btn2 = document.querySelector("#btn2");
+            const btn3 = document.querySelector("#btn3");
+
+            const func1 = function (e) {
+                div.classList.add("myStyle");
+            };
+
+            const func2 = function (e) {
+                div.classList.remove("myStyle");
+            };
+
+            const func3 = function (e) {
+                div.classList.toggle("myStyle");
+            };
+
+            btn1.addEventListener("click", func1)
+            btn2.addEventListener("click", func2)
+            btn3.addEventListener("click", func3)
+        </script>
+    </body>
+</html>

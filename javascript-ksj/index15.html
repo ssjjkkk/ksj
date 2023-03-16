@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index15</title>
+    </head>
+    <body>
+        <input type="text" id="name">
+
+        <script>
+            // 이벤트 대상 선언
+            const nameInput = document.querySelector("#name");
+            // 함수 선언
+            const func1 = function (e) {
+                // if (e.code === "Enter") {
+                //     console.log("엔터키");
+                // };
+                console.log(e.target.qvalue);
+                console.log(e);
+            };
+            // 이벤트 등록 (대상.이벤트리스너(이벤트, 함수))
+            nameInput.addEventListener("change", func1);
+        </script>
+    </body>
+</html>

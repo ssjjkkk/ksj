@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index18</title>
+    </head>
+    <body>
+        <h2>Hello~~</h2>
+
+        <script>
+            // resize 이벤트는 그 대상이 window 이다.
+            const resize = function (e) {
+                const h2 = document.querySelector("h2");
+                h2.innerHTML = "Just Resize";
+            };
+
+            const con = function (e) {
+                const h2 = document.querySelector("h2");
+                h2.innerHTML = "right click";
+                e.preventDefault();
+            };
+            // window는 브라우저가 로딩시 선언한 글로벌 변수임. (선언이 불필요)
+            window.addEventListener("resize", resize);
+            window.addEventListener("contextmenu", con);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index16</title>
+    </head>
+    <body>
+        <div id="noContextMenu" style="background-color: #eee;">
+            여기는 우클릭 금지
+        </div>
+        <div>다른 곳은 우클릭 가능</div>
+
+        <script>
+            const noContxt = document.querySelector("#noContextMenu");
+            const callback = function (e) {
+                console.log(e);
+                e.preventDefault();
+            };
+            noContxt.addEventListener("contextmenu", callback);
+        </script>
+    </body>
+</html>
