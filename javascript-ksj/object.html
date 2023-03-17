@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>object</title>
+    </head>
+    <body>
+        <script>
+            const carObject1 = {
+                brand : "현대",         // property : value
+                model : "소나타",
+                trim : "럭셔리",
+                color : "흰색",
+                // price는 method라고 부른다.
+                price : function () {
+                    return 3000;
+                }
+            };
+
+            const carObject2 = {
+                brand : "현대",
+                model : "싼타페",
+                trim : "럭셔리",
+                color : "회색"
+            };
+
+            console.log(carObject1.model);
+            console.log(carObject2.trim);
+            console.log(carObject1["model"]); // 프로퍼티 이름을 이용하는 방법
+            const 가격 = carObject1.price();
+            console.log(가격);
+
+            const user = {
+                이름 : "김석준",
+                성별 : "남",
+                나이 : "29",
+                주소 : "대전",
+                MBTI : "intp"
+            };
+
+            console.log(user.이름);
+            console.log(user.성별);
+            console.log(user.나이);
+            console.log(user.주소);
+            console.log(user.MBTI);
+        </script>
+    </body>
+</html>

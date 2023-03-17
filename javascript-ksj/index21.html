@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index21</title>
+    </head>
+    <body>
+        <script>
+            // library
+            // 개발자들을 위하여 편리한 기능을 미리 만들어서 모아논 것
+            const num1 = 10.555555555;
+            const 반올림 = Math.round(num1);
+            console.log(반올림);
+            const 버림 = Math.floor(num1);
+            console.log(버림);
+            const num2 = 10.1;
+            const 올림 = Math.ceil(num2);
+            console.log(올림);
+
+            const num3 = -4.7;
+            const 절대값 = Math.abs(num3);
+            console.log(절대값);
+
+            const x = 10;
+            const y = 9;
+            const z = 11;
+            console.log(Math.min(x, y, z));
+            console.log(Math.max(x, y, z));
+
+            const 랜덤 = Math.random(); // 무작위의 임의의 숫자. 범위는 0 ~ 0.9999999999999999
+            const 랜덤1 = Math.random()*10;
+            console.log(랜덤);
+            console.log(Math.floor(랜덤1));
+
+            // 랜덤넘버 공식 - min은 랜덤값에 포함이고(이상) max는 포함하지않음(미만)
+            // Math.floor(Math.random() * (max - min)) + min;
+
+            // 101 ~ 999까지 나온다면.
+            console.log(Math.floor(Math.random() * (1000 - 101)) + 101);
+
+        </script>
+    </body>
+</html>
