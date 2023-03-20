@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index22copy</title>
+    </head>
+    <body>
+        <script>
+            // 수정본
+            const users = ["smith", "tom", "steve", "allen"];
+            const 함수 = function (x, y) {
+                // 배열에서 찾으면 위치를 리턴, 못찾으면 -1을 리턴
+                let i = 0;
+                for (i; i < x.length; i++) {
+                    if (x[i] === y) {
+                        break;
+                    };
+                };
+                if (i < x.length) { // 찾으면
+                    return i;
+                }else { // 못찾으면 i = x.length
+                    return -1;
+                }
+            };
+
+            // const 위치 = 함수(users, "tom");
+            // if (위치 < 0) {
+            //     console.log("존재하지 않음");
+            // } else {
+            //     console.log(`인덱스 ${위치} 번째에 있음`);
+            // };
+
+            const 위치 = 함수(users, "김석준");
+            if (위치 < 0) {
+                console.log("존재하지 않음");
+            } else {
+                console.log(`인덱스 ${위치} 번째에 있음`);
+            };
+        </script>
+    </body>
+</html>

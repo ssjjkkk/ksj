@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>arrow</title>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button>click</button>
+        <script>
+            // const myFunc = function (a, b) {
+            //     return a * b;
+            // };
+
+            // const myFunc = (a, b) => { //arrow function () => {};
+            //     return a * b;
+            // };
+
+            // const myFunc = (a, b) =>  a * b; // return 없이 줄일 수 있음.
+
+            // const val = myFunc(2, 3);
+            // console.log(val);
+
+            const btn = document.querySelector("button");
+            // const callback = function (e) {
+            // 에로우 함수로 변경
+            const callback = (e) => {
+                const h1 = document.querySelector("h1");
+                let counter = parseInt(h1.innerHTML, 10);
+                counter = counter + 1;
+                h1.innerHTML = counter;
+            };
+            // ****** 익명함수 ****** 함수선언시 함수 이름을 만들지 않는다.
+            btn.addEventListener("click", (e) => {
+                const h1 = document.querySelector("h1");
+                let counter = parseInt(h1.innerHTML, 10);
+                counter = counter + 1;
+                h1.innerHTML = counter;
+            });
+
+            // forEach도 익명함수 스타일
+            const 배열 = [1, 2, 3, 4, 5];
+            배열.forEach((숫자, i) => {
+                console.log(숫자 + " 는 " + (i + 1) + "번째 숫자");
+            });
+
+        </script>
+    </body>
+</html>

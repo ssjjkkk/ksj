@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>index23</title>
+    </head>
+    <body>
+        <select id="mySelect">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="option3">option3</option>
+        </select>
+        <p id="selectedValue"></p>
+        <script>
+            const select = document.querySelector("#mySelect");               
+            const pTag = document.querySelector("#selectedValue");
+
+            select.addEventListener ("change", (e) => {   
+                console.log(e);    
+                pTag.innerHTML = e.target.value;
+            });
+        
+        </script>
+    </body>
+</html>
