@@ -33,6 +33,7 @@
             };
             // ****** 익명함수 ****** 함수선언시 함수 이름을 만들지 않는다.
             btn.addEventListener("click", (e) => {
+                console.log(e);
                 const h1 = document.querySelector("h1");
                 let counter = parseInt(h1.innerHTML, 10);
                 counter = counter + 1;
