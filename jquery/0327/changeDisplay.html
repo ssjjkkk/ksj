@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>changeDisplay</title>
+    <script src="../jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // function callback (){
+            //     $(this).css('display', 'none');
+            // };
+            // $('h2').click(callback);
+            $("h2").on("click", function(){
+                $(this).css('display', 'none');
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>클릭하면 사라집니다1</h2>
+    <h2>클릭하면 사라집니다2</h2>
+    <h2>클릭하면 사라집니다3</h2>
+    <h2>클릭하면 사라집니다4</h2>
+    <h2>클릭하면 사라집니다5</h2>
+    <h2>클릭하면 사라집니다6</h2>
+</body>
+</html>

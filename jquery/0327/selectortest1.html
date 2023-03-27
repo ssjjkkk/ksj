@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>selectortest1</title>
+    <script src="../jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("body>p>span").css("backgroundColor", "yellow")
+        })
+    </script>
+</head>
+<body>
+    <p>이 문단에는 <span>스판</span> 엘리먼트가 있다</p>
+    <div>
+        이 디비젼에도 <span>스판</span> 엘리먼트가 있다
+        <p>
+            디비젼의 내부 문단의 <span>스판</span> 엘리먼트이다
+        </p>
+        <div>
+            내부 디비젼의 다시 문단 속 아주
+            <strong>깊은곳에</strong>
+            <em>숨어있는</em>
+            <span>스판</span> 엘리먼트도 있다.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>changeCss</title>
+    <!-- cdn 방식 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js"></script> -->
+    <!-- 내부 스크립트 방식 -->
+    <script src="../jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 전체 배경색을 변경
+            $('body').css('backgroundColor', 'yellow');
+            // h1요소의 글자색을 변경
+            $('h1').css('color', 'blue');
+            // id small인 요소의 글자색을 녹색
+            $('#small').css('color', 'green');
+            // class sample인 요소의 글자색을 빨간색
+            $('.sample').css('color', 'red');
+        })
+    </script>
+</head>
+<body>
+    <h1>제목입니다</h1>
+    <h2 id="small">작은 제목입니다</h2>
+    <h2 class="sample">샘플입니다</h2>
+</body>
+</html>
