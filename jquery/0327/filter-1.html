@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>filter-1</title>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('li:first, :last').css('backgroundColor', 'yellow');
+                $('li:lt(4)').css('font-size', '30px');
+                $('li:eq(5)').css('backgroundColor', 'red');
+            })
+
+            // 컨테인즈 엠티 해즈 패런츠
+
+            //자식필터
+            // nth-child(방정식)
+            // first-child 부모에걸어서 찾음
+            // last-child
+            // only-child
+
+            //상태필터 입력양식의 현재 상태
+            // enabled dis'' checked selected
+
+            //기타필터 visibility : hidden, visible
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>1</li>
+            <li style="visibility: hidden;">2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>        
+    </body>
+</html>

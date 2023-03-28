@@ -10,10 +10,17 @@
             // href가 mailto 로 시작하는 a 요소의 배경색 변경  
             // id 가 img1인것만 제외한(아닌) img요소의 테두리 변경 
             // src가 png로 끝나는 img 요소의 테두리 변경
-            $("input[type = button]").css("backgroundColor", "yellow");
-            $("a[href ^= mailto]").css("backgroundColor", "red");
-            $("img[id != img1]").css("border", "solid").css("borderColor", "yellow");
-            $("img[src $= png]").css("border", "solid").css("borderColor", "blue");
+            $("input").on("click", function(){
+                $("input[type = button]").css("backgroundColor", "yellow");
+                $("a[href ^= mailto]").css("backgroundColor", "red").css("text-decoration", "none");
+                $("img[id != img1]").css("border", "solid yellow 4px")/* .css("borderColor", "yellow"); */
+                $("img[src $= png]").css("border", "solid blue 10px")/* .css("borderColor", "blue"); */
+            })
+            // 중복되는 곳 {}로 묶기가능. {}안에 "?" : "?"
+            // $("input[type = button]").css("backgroundColor", "yellow");
+            // $("a[href ^= mailto]").css("backgroundColor", "red");
+            // $("img[id != img1]").css("border", "solid").css("borderColor", "yellow");
+            // $("img[src $= png]").css("border", "solid").css("borderColor", "blue");
         })
     </script>
 </head>
