@@ -46,7 +46,11 @@ public class ArithmeticOperator {
 		System.out.println(value8);
 		System.out.println(value9);
 		
+		// 전위형 덧셈, 뺄셈 연산은 해당줄에서 바로 연산되어 값이 변한다.
+		// 후위형 덧셈, 뺄셈 연산은 해당줄의 다음줄 부터 연산되어 값이 변한다.
 		
+		int i = 10;
+		int j = 20;		
 		
 		
 	}
