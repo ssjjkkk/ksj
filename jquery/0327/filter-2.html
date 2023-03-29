@@ -6,24 +6,37 @@
         <script src="../jquery-3.6.4.js"></script>
         <script>
             $(document).ready(function(){
-                $('li:first, :last').css('backgroundColor', 'yellow');
-                $('li:lt(4)').css('font-size', '30px');
-                $('li:eq(5)').css('backgroundColor', 'red');
+                $('#btnView').on('click', function(){
+                    let name = $('#user').val("Japan");
+                    let gender = $(':checked').val();
+                    let intro = $('textarea').val('테스트입니다');
+                    let job = $(':selected').val();
+
+                    // alert(`${name}, ${gender}, ${intro}, ${job}`);
+                
+                })
             })
-            // 컨테인즈 엠티 해즈 패런츠
         </script>
     </head>
     <body>
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
+            <form>
+                <label for="user">이름</label>
+                <input type="text" id="user" value="korea"><br>
+                <label>성별</label>
+                <input type="radio" name="gend" id="gend" value="남자" checked> 남자
+                <input type="radio" name="gend" id="gend" value="여자"> 여자<br>
+                <label for="intro">소개</label>
+                <textarea id="intro" cols="40" rows="4"></textarea> <br>
+                <label for="work">직업</label>
+                <select id="work">
+                    <option value="programmer">프로그래머</option>
+                    <option value="progammer">프로게이머</option>
+                    <option value="whitehand">백수</option>
+                </select><br>
+                <input type="button" id="btnView" value="조사하기">
+                <input type="button" id="btnChange" value="이름변경">
+            </form>
         </ul>        
     </body>
 </html>
