@@ -137,21 +137,36 @@ public class conditionalStatement {
 //		};
 		
 		// 두개의 숫자를 입력받아 더 큰 숫자를 출력해주세요.
+//		Scanner s1 = new Scanner(System.in);
+//		System.out.println("첫번째 숫자를 입력하세요.");		
+//		int num1 = Integer.parseInt(s1.nextLine());
+//		System.out.println("두번째 숫자를 입력하세요.");
+//		int num2 = Integer.parseInt(s1.nextLine());
+//		
+//		if (num1 < num2) {
+//			System.out.println("더 큰 숫자 : " + num2);
+//		} else if (num1 > num2) {
+//			System.out.println("더 큰 숫자 : " + num1);
+//		} else {
+//			System.out.println("같은 숫자 입니다.");
+//		}
+
+		//세개의 숫자를 입력받아 가장 큰 숫자를 출력해주세요.
 		Scanner s1 = new Scanner(System.in);
-		System.out.println("숫자를 두번 입력하세요.");
-		
+		System.out.println("첫번째 숫자를 입력하세요.");		
 		int num1 = Integer.parseInt(s1.nextLine());
+		System.out.println("두번째 숫자를 입력하세요.");
 		int num2 = Integer.parseInt(s1.nextLine());
+		System.out.println("세번째 숫자를 입력하세요.");
+		int num3 = Integer.parseInt(s1.nextLine());
 		
-		if (num1 < num2) {
-			System.out.println("더 큰 숫자 : " + num2);
-		} else if (num1 > num2) {
-			System.out.println("더 큰 숫자 : " + num1);
+		if (num1 >= num2 && num1 >= num3) {
+			System.out.println("가장 큰 숫자 : " + num1);
+		} else if (num2 >= num1 && num2 >= num3) {
+			System.out.println("가장 큰 숫자 : " + num2);
 		} else {
-			System.out.println("같은 숫자 입니다.");
-		}
-		
-		
+			System.out.println("가장 큰 숫자 : " + num3);
+		};
 		
 
 	}
