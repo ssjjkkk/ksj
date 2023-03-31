@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>proptest1</title>
+        <style>
+          
+        </style>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                console.log($('#checkTest').attr('id'));
+                console.log($('#checkTest').prop('id'));
+                console.log($('#checkTest').attr('checked'));
+                console.log($('#checkTest').prop('checked'));
+                console.log($('#selTest option:selected').attr('selected'));
+                console.log($('#selTest option:selected').prop('selected'));
+                console.log($('#txtTest').attr('readonly'));
+                console.log($('#txtTest').prop('readonly'));
+                console.log($('#runBtn').attr('disabled'));
+                console.log($('#runBtn').prop('disabled'));                
+
+                $('#selTest').on("change", function () {
+                    console.log($('#selTest option:selected').text());
+                    console.log($('#selTest option:selected').val());
+                });
+
+                
+                $('#all').on('click', function () {
+                    if($('#all').prop('checked')) {
+                        $('input[name = test]').prop('checked', true)
+                    } else {
+                        $('input[name = test]').prop('checked', false)
+                    }
+                })
+
+                $('input[name = test]').on('click', function () {
+                    if ($('input[name = test]:checked').not('#all').length < $('input[name = test]').not('#all').length){
+                        $('#all').prop('checked', false)
+                    } else {
+                        $('#all').prop('checked', true)
+                    }
+                })
+                    
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <input>
+            체크박스(라디오버튼) : <input type="checkbox" id="checkTest" checked><br><br>
+            리스트박스(select객체) : 
+             <select id="selTest">
+                 <option value="1">하나</option> <option value="2">둘</option>
+                 <option value="3" selected>셋</option> <option value="4">넷</option>
+             </select><br><br>            
+             text객체 (readonly) : <input type="text" value="가나다" id="txtTest" readonly><br><br>            
+             button객체(disabled) : <input type="button" value="실행" id="runBtn" disabled><br><br>
+             체크박스(전체선택/해제):
+             <input type="checkbox" name="test" value="all" id="all">
+             <label for="all">전체선택</label>
+             <input type="checkbox" name="test" value="one" id="one">
+             <label for="one">111</label>
+             <input type="checkbox" name="test" value="two" id="two">
+             <label for="two">222</label>
+             <input type="checkbox" name="test" value="three" id="three">
+             <label for="three">333</label>
+             <input type="checkbox" name="test" value="four" id="four">
+             <label for="four">444</label>
+             <input type="checkbox" name="test" value="five" id="five">
+             <label for="five">555</label>
+        </form>    
+    </body>
+</html>

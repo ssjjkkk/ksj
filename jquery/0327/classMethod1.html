@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>classMethod1</title>
+        <style>
+            .wrapper * {
+                display: block;
+                border: 2px solid lightgray;
+                color: lightgray;
+                padding: 5px;
+                margin: 15px;
+            }
+
+            .big {
+                font-size: 200%;
+                color: black;
+                font-weight: bold;
+            }
+            .back {
+                background-color: yellow;
+            }
+            .reddish {
+                color: red;
+            }
+
+        </style>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#adClassBtn').on('click', function() {
+                    $('li:last').addClass('big back');
+                })
+                $('#removeClassBtn').on('click', function() {
+                    console.log($('li:last').hasClass('big'))
+                    if ($('li:last').hasClass('big')) {
+                        $('li:last').removeClass();    
+                    }
+                })
+                $('#toggleClassBtn').on('click', function() {
+                    $('li:last').toggleClass('big');
+                })
+                $('#attrCheckBtn').on('click', function() {
+                    let last = $('li:last');
+                    let classNm = last.attr('class');
+                    console.log(`last 가 가지고 있는 속성 : ${classNm}`)
+                    last.attr('class', 'reddish')
+                    classNm = last.attr('class');
+                    console.log(`last 가 가지고 있는 속성 : ${classNm}`)
+
+                    last.attr('id', 'testId');
+                    // alert($('#testId').text())
+                    $('#testId').text('테스트ID 를 부여한 li 입니다.');
+                })
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper" style="width: 500px;">
+            <ul>
+                <li class="start">li class = "start"</li>
+                <li class="my">li class = "my"</li>
+                <li></li>
+                <li class="my">li class = "my"</li>                
+                <li class="stop">li class = "stop"</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <button id="adClassBtn">클래스 추가 버튼</button>
+        <button id="removeClassBtn">클래스 삭제 버튼</button>
+        <button id="toggleClassBtn">클래스 토글 버튼</button>
+        <button id="attrCheckBtn">속성 확인 버튼</button>
+    </body>
+</html>
