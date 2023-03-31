@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>jqueryExample</title>
+        <style>
+            div {                
+                border: orange solid 3px;
+            }
+        </style>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('div:first').on('click', function(){
+                    $('div:first').append($('<p>무궁화 꽃이 피었습니다.</p>').css('color', 'red'))
+                })
+
+                $('div:last').on('click', function(){
+                    $('div:last').append($('<p>사뿐히 즈려밟고 가시옵소서.</p>').css('color', 'blue'))
+                })
+
+                $('body>p').on('click', function(){
+                    alert("작업 대상이 아닙니다.");
+                })
+                // $('div:first').append($('<p>') {
+                //     prop.({
+                //         color : red;
+                //     })
+                
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>무궁화 꽃이 피었습니다.</p>
+        </div>
+        <p>은주는 예쁘다~</p>
+        <div>
+            <p>사뿐히 즈려밟고 가시옵소서.</p>
+        </div>
+    </body>
+</html>

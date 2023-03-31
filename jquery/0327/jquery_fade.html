@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>changeCss</title>
+        <style>
+            .wrapper * {
+                display: block;
+                border: 2px solid lightgray;
+                color: lightgray;
+                padding: 5px;
+                margin: 15px;
+            }
+
+            .big {
+                font-size: 200%;
+                color: black;
+                font-weight: bold;
+            }
+            .back {
+                background-color: yellow;
+            }
+            .reddish {
+                color: red;
+            }
+        </style>
+        <script src="../jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                function showConsole (target) {
+                    console.log(target);
+                };
+
+                $('.start').addClass('reddish');
+                $('li:last').css('border', '3px solid red');
+
+                $('#fadeOutBtn').on('click', function(){
+                    // $('li:last').fadeOut();  // 기본형
+                    // $('li:last').fadeOut(5000);  // 파라미터 숫자
+                    $('li:last').fadeOut('fast');  // 파라미터 문자열 (slow, fast)
+                })
+
+                $('#fadeInBtn').on('click', function(){
+                    // $('li:last').fadeIn();     // 기본형
+                    // $('li:last').fadeIn(5000);  // 파라미터 숫자
+                    $('li:last').fadeIn('slow');  // 파라미터 문자열 (slow, fast)
+                })
+
+                $('#fadeToggleBtn').on('click', function(){
+                    // $('li:last').fadeToggle();     // 기본형
+                    // $('li:last').fadeToggle(5000);  // 파라미터 숫자
+                    $('li:last').fadeToggle('slow');  // 파라미터 문자열 (slow, fast)
+                })
+
+                $('#fadeToBtn').on('click', function(){
+                    $('li:last').fadeTo('slow', 0.15);   // opacity 투명도 조절
+                })
+
+                
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapper" style="width: 500px;">
+            <ul>
+                <li class="start">li class = "start"</li>
+                <li class="my">li class = "my"</li>
+                <li></li>
+                <li class="my">li class = "my"</li>                
+                <li class="stop">li class = "stop"</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <button id="fadeOutBtn">요소 Fade Out</button>
+        <button id="fadeInBtn">요소 Fade In</button>
+        <button id="fadeToggleBtn">요소 Fade toggle</button>        
+        <button id="fadeToBtn">요소 Fade to</button>
+    </body>
+</html>
