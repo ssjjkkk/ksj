@@ -217,22 +217,89 @@ public class RepetitiveStatement {
 		// 특정 값을 입력 했을 때 종료가 되게 만들어 주세요.
 		
 		
-		Scanner s = new Scanner(System.in);
-		System.out.println("값을 입력해 주세요. 0을 누르면 종료");
+//		Scanner s = new Scanner(System.in);
+//		System.out.println("값을 입력해 주세요. 0을 누르면 종료");
+//		
+//		while(true) {
+//			int val = Integer.parseInt(s.nextLine());			
+//			if (val == 0) {
+//				System.out.println("종료되었습니다.");
+//				break;
+//			}
+//			int c = 1;
+//			while (c <= 9) {
+//				System.out.println(val + "단 :" + val + " X " + c + " = " + c*val );
+//				c++;
+//			}
+//			System.out.println("값을 입력해 주세요. 0을 누르면 종료");
+//		};
 		
-		while(true) {
-			int val = Integer.parseInt(s.nextLine());			
-			if (val == 0) {
-				System.out.println("종료되었습니다.");
+		
+		// while 문과  do-while 문 비교
+//		int a = 0;
+//		while (a < 0) {
+//			System.out.println(a + " ");
+//			a++;
+//		}
+//		System.out.println();
+//		a = 0;
+//		do {
+//			System.out.println(a + " ");
+//			a++;
+//		} while(a < 0);
+//		System.out.println();
+		
+//		int a = 0;
+//		while (a < 10) {
+//			System.out.println(a + " ");
+//			a++;
+//		}
+//		System.out.println();
+//		
+//		a = 0;
+//		do {
+//			System.out.println(a + " ");
+//			a++;
+//		} while(a < 10);
+//		System.out.println();
+		
+//		int a = 0;
+//		do {
+//			System.out.println(a + " ");
+//			++a;
+//		} while(a < 10);
+		
+		// 숫자 맟추기 게임을 만들어 봅시다.
+		// 맟출 때 까지 루프
+		// 엎 & 다운 do while문으로
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("정답 범위를 정하세요.");
+		int val1 = Integer.parseInt(s.nextLine());
+		int ran = (int) (Math.random() * val1 + 1);
+		System.out.println("정답을 맟출 횟수를 정하세요.");
+		int userRepet = Integer.parseInt(s.nextLine());
+		int val = 0;
+		System.out.println("1 ~" + val1 + " 값을 입력해 주세요." + userRepet + "번 안에 맟추세요.");
+		int count = 0;
+		do {
+			count ++;
+			System.out.println("시도 횟수 : " + count);
+			if (count == userRepet) {
+				System.out.println("실패");
 				break;
 			}
-			int c = 1;
-			while (c <= 9) {
-				System.out.println(val + "단 :" + val + " X " + c + " = " + c*val );
-				c++;
+			val = Integer.parseInt(s.nextLine());
+			if (val == ran) {
+				System.out.println("정답입니다.");
+			} else if (val > ran) {
+				System.out.println("다운");
+			} else {
+				System.out.println("업");
 			}
-			System.out.println("값을 입력해 주세요. 0을 누르면 종료");
-		};
+		} while (val != ran);
+		
+		
 		
 		
 		
