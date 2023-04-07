@@ -34,6 +34,13 @@ public class Running {
 			System.out.println("현재속도 : " + speed + ", 현재 각도 : " + " + incline");
 			this.power = true;
 		}else {
+			cal = Math.round((double)(0.0157 * ((0.1 * speed + 3.5) / 3.5) * weight * time * (incline + 1) * 100)) / 100d;
+			System.out.println("운동을 마쳤습니다. 총 소모 칼로리 : " + cal + "kcal" );
+			if (cal > 100) {
+				System.out.println(cal + "kcal 소모하셨습니다. 앞으로도 꾸준히!!");
+			}else {
+				System.out.println(cal + "kcal 소모하셨습니다. 조금 더 열심히 해주세요!!");
+			}
 			this.power = false;
 		}
 		return this.power;
