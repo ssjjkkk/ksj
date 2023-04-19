@@ -30,4 +30,6 @@ SELECT SYSDATE + 1/24/60
   FROM dual
 ;
 
-
+-- 데이트 표현하는 방법
+-- 1. 데이트 리터럴 : NLS_SESSION_PARAMETER 설정에 따르기 때문에 DBMS 환경마다 다르게 인식될 수 있음
+-- 2. TO_DATE : 문자열을 날짜로 변경해주는 함수
