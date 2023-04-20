@@ -67,6 +67,12 @@ public class RegularExpression {
 		System.out.println(m4.matches());
 		// 주민등록 번호
 		// \d{6}-[1-4]{1}\d{6}
+		
+		String asd = "12345678";
+		String reasd = asd.replaceAll("\\B(?=(\\d{3})+(?!\\d))", ",");
+		String reasd2 = asd.replaceAll("\\B(?=(\\d{3})+(?!\\d))", ",");
+		System.out.println(reasd);
+		System.out.println(reasd2);
 	}
-
+	
 }
