@@ -1,5 +1,6 @@
 package i_collection;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
@@ -74,6 +75,14 @@ public class HashMapClass {
 		for(String key : uk) {
 			System.out.println(key + " : " + user.get(key));
 		}
+		
+		ArrayList<HashMap<String, String>> table = new ArrayList<>();
+		table.add(user);
+		table.add(user);
+		System.out.println(table.get(0).get("name"));
+		
+		
+		
 		
 
 	}
