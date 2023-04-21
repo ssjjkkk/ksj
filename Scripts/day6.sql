@@ -171,13 +171,11 @@ SELECT DEPTNO, SUM(sal)
 HAVING SUM(sal) > 9000
 ;
 
+-- 위의 쿼리를 HAVING절 없이 작성
 SELECT *
-FROM emp;
-
-SELECT *
-FROM dept;
-
-
-
-
-
+  FROM (SELECT DEPTNO, SUM(sal) ss 
+  		FROM emp
+ 		GROUP BY deptno
+  		)
+ WHERE ss > 9000
+;
