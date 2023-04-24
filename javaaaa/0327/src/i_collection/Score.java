@@ -66,6 +66,10 @@ public class Score {
 		int temp = 0;
 		String temp1 = "";
 		double temp2 = 0;
+		ArrayList<ArrayList<Integer>> temps = new ArrayList<>();
+		ArrayList<Integer> temp3 = new ArrayList<>();
+//		ArrayList<Double> temp4 = new ArrayList<>();
+//		ArrayList<String> temp5 = new ArrayList<>();
 		for(int i = 0; i < names.size() - 1; i++) {
 			int min = i;
 			for(int j = i + 1; j < names.size(); j++) {
@@ -89,6 +93,50 @@ public class Score {
 			rank.set(i, rank.get(min));
 			rank.set(min, temp);
 		}
+		
+		// 목차 출력부
+		for(int i = 0; i < subjects.size(); i++) {
+			System.out.print("\t" + subjects.get(i));
+		}
+		System.out.print("\t합계\t평균\t석차\n");
+		// 이름 , 점수 출력부
+		for(int i = 0; i < names.size(); i++) {
+			System.out.print(names.get(i) + "\t");
+			for(int j = 0; j < subjects.size(); j ++) {
+				System.out.print(scores.get(i).get(j) + "\t");
+			}
+			System.out.println(names_sum.get(i) + "\t" + names_avg.get(i) + "\t" + rank.get(i));
+		}
+		// 과목 합계, 평균 리스트 생성
+		ArrayList<Integer> sub_sum = new ArrayList<>();
+		ArrayList<Double> sub_avg = new ArrayList<>();
+		for(int i = 0; i < subjects.size(); i ++) {
+			int sum = 0;
+			double avg = 0;
+			for(int j = 0; j < names.size(); j ++) {
+				sum += scores.get(j).get(i);
+			}
+			sub_sum.add(sum);
+			avg = Math.round((double)sum/names.size() * 100) / 100d;
+			sub_avg.add(avg);
+		}
+		
+		// 과목 합계, 평균 출력부
+		System.out.print("과목합계\t");
+		for(int i = 0; i < subjects.size(); i++) {
+			System.out.print(sub_sum.get(i) + "\t");
+		}
+		System.out.println("");
+		System.out.print("과목평균\t");
+		for(int i = 0; i < subjects.size(); i++) {
+			System.out.print(sub_avg.get(i) + "\t");
+		}
+		
+		
+		
+		
+		System.out.println("");
+		System.out.println("");
 		System.out.println(names);
 		System.out.println(subjects);
 		System.out.println(names_sum);
