@@ -127,13 +127,3 @@ SELECT gc.pid, pnm, a "SUM(CNT)"
 
 
 
-
-SELECT *
-  FROM customer;
-SELECT *
-  FROM cycle;
-SELECT *
-  FROM product;
-
-
-
