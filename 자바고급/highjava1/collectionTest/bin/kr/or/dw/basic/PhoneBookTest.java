@@ -76,10 +76,55 @@ public class PhoneBookTest {
 				phoneBookList.put(name, p);
 				break;
 			case 2:
-				
+				int count3 = 0;
+				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+				System.out.println("번호\t이름\t전화번호\t\t나이\t주소");
+				System.out.println("------------------------------------------------------");
+				for(String key : phoneBookList.keySet()) {
+					count3++;
+					System.out.println(count3 + "\t" + key + "\t" + phoneBookList.get(key).getTel() + "\t"
+							+ phoneBookList.get(key).getAge() + "\t" + phoneBookList.get(key).getAddr());
+				}
+				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+				System.out.println("수정할 사람의 이름을 입력해주세요.");
+				System.out.print("이름 >> ");
+				String coName = sc.nextLine();
+				for(String key : phoneBookList.keySet()) {
+					if(key.equals(coName)) {
+						System.out.println("수정할 전화번호를 입력해주세요.");
+						String coTel = sc.nextLine();
+						System.out.println("수정할 나이를 입력해주세요.");
+						int coAge = Integer.parseInt(sc.nextLine());
+						System.out.println("수정할 주소를 입력해주세요.");
+						String coAddr = sc.nextLine();
+						p = new Phone(coTel, coAge, coAddr);
+						phoneBookList.put(coName, p);
+						System.out.println("수정이 완료되었습니다.");
+						break;
+					}
+				}
 				break;
 			case 3:
-				
+				int count2 = 0;
+				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+				System.out.println("번호\t이름\t전화번호\t\t나이\t주소");
+				System.out.println("------------------------------------------------------");
+				for(String key : phoneBookList.keySet()) {
+					count2++;
+					System.out.println(count2 + "\t" + key + "\t" + phoneBookList.get(key).getTel() + "\t"
+							+ phoneBookList.get(key).getAge() + "\t" + phoneBookList.get(key).getAddr());
+				}
+				System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+				System.out.println("삭제할 전화번호부의 이름을 입력하세요.");
+				System.out.print("이름 >> ");
+				String delName = sc.nextLine();
+				for(String key : phoneBookList.keySet()) {
+					if(key.equals(delName)) {
+						phoneBookList.remove(delName);
+						System.out.println("삭제가 완료되었습니다.");
+						break;
+					}
+				}
 				break;
 			case 4:
 				System.out.print("검색할 사람의 이름을 입력하세요 >> ");
