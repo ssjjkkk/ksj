@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h2>메인 페이지 입니다.</h2>
+	<script>
+		location.href="<%= request.getContextPath()%>/member/memberList.do";
+	</script>
 </body>
 </html>

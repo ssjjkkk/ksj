@@ -37,4 +37,12 @@ public class MemberVO {
 		this.mem_addr = mem_addr;
 	}
 	
+//	@Override
+//	public String toString() {
+//		return "MemberVO [mem_id=" + mem_id + ", mem_name=" + mem_name + ", mem_tel=" + mem_tel + ", mem_addr="
+//				+ mem_addr + "]";
+//	}
+	
+	
+	
 }
